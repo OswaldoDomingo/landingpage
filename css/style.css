@@ -2,3 +2,25 @@
     color:#FFFFFF; 
     font-size: 3em;
 }
+.custom-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 370px; /* Máximo ancho */
+    height: 142px; /* Altura fija */
+    margin: auto; /* Centra el div en la columna */
+    font-size: 1.4em;
+    color: #07521a !important;
+
+}
+
+.custom-div:hover {
+    background-color: #07521a !important;
+    color: #cc7614 !important;
+    text-decoration: underline;
+}
+
+.row > div {
+    padding: 15px; /* Espaciado entre los div */
+}
