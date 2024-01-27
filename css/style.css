@@ -18,11 +18,11 @@
                 0 0 0 15px #fff, /* Este es el espacio entre los bordes */
                 0 0 0 16px #000; /* Este es el borde interior */
 }
-
+/* Poner un marco a los botones de arriba */
 .custom-div:hover {
     background-color: #07521a !important;
     color: #ffffff !important;
-    box-shadow: 0 0 0 1px #ffffff, /* Este es el borde exterior */
+    box-shadow: 0 0 0 1px #e4dede, /* Este es el borde exterior */
                 0 0 0 15px #07521a, /* Este es el espacio entre los bordes */
                 0 0 0 16px #ffffff; /* Este es el borde interior */
 }
