@@ -12,15 +12,25 @@
     margin: auto; /* Centra el div en la columna */
     font-size: 1.4em;
     color: #07521a !important;
-
+}
+.custom-div {
+    box-shadow: 0 0 0 1px #000, /* Este es el borde exterior */
+                0 0 0 15px #fff, /* Este es el espacio entre los bordes */
+                0 0 0 16px #000; /* Este es el borde interior */
 }
 
 .custom-div:hover {
     background-color: #07521a !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 0 1px #ffffff, /* Este es el borde exterior */
+                0 0 0 15px #07521a, /* Este es el espacio entre los bordes */
+                0 0 0 16px #ffffff; /* Este es el borde interior */
+}
+
+.custom-div p:hover {
     color: #cc7614 !important;
-    text-decoration: underline;
 }
 
 .row > div {
-    padding: 15px; /* Espaciado entre los div */
+    padding: 25px; /* Espaciado entre los div */
 }
