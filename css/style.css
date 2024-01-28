@@ -34,3 +34,16 @@
 .row > div {
     padding: 25px; /* Espaciado entre los div */
 }
+
+.circulo {
+    border-radius: 50%;
+    width: auto;
+}
+
+.accordion-button:not(.collapsed){
+    background-color: #FFFFFF;
+}
+.opinion-cliente{
+    font-size: 2.5em;
+    color: #000000;
+}
