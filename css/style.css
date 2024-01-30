@@ -35,9 +35,9 @@
     padding: 25px; /* Espaciado entre los div */
 }
 
-.circulo {
-    border-radius: 50%;
-    width: auto;
+.imagen {
+    width: 100px;
+    height: 100px;
 }
 
 .accordion-button:not(.collapsed){
