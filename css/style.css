@@ -50,3 +50,14 @@
 .p-custom-margin {
     padding-left: 4rem; /* Ajusta este valor a tus necesidades */
 }
+/* Ajusta el tamaño de la imagen de las tarjetas para que no se hagan muy grandes al reducir la pantalla */
+/* Se debe usar para una sola vez*/
+.img-premio{
+    text-align: center;
+    max-width: 270px;
+    max-height: 145px;
+}
+/* rectifco el alto de la tarjeta para que sea un mínimo de altura y quden todas iguales */
+.card{
+    min-height: 440px;
+}
