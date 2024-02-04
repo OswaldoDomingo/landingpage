@@ -87,3 +87,7 @@
     color: #ffffff;
     padding: 20px; /* Añade un poco de espacio interno */
 }
+.alto-minimo{
+    /* Se crea una altura mínima al 100% para que siempre tengan el mismo tamaño */
+    min-height: 100%;
+}
