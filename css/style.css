@@ -2,6 +2,7 @@
     color:#FFFFFF; 
     font-size: 3em;
 }
+
 .custom-div {
     display: flex;
     flex-direction: column;
@@ -31,15 +32,23 @@
     color: #cc7614 !important;
 }
 
+.fondo-tarjetas{
+    background-color: #655f05;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
 .row > div {
     padding: 25px; /* Espaciado entre los div */
 }
 
+/* Imágenes de los galardones */
 .imagen {
     width: 100px;
     height: 100px;
 }
-
+/* Acordeón */
 .accordion-button:not(.collapsed){
     background-color: #FFFFFF;
 }
@@ -50,6 +59,8 @@
 .p-custom-margin {
     padding-left: 4rem; /* Ajusta este valor a tus necesidades */
 }
+
+/* Premios y galardones */
 /* Ajusta el tamaño de la imagen de las tarjetas para que no se hagan muy grandes al reducir la pantalla */
 /* Se debe usar para una sola vez*/
 .img-premio{
@@ -60,4 +71,19 @@
 /* rectifco el alto de la tarjeta para que sea un mínimo de altura y quden todas iguales */
 .card{
     min-height: 440px;
+}
+/* Modificar los colores de el botón del formulario */
+.btn{
+    background-color: #655f05;
+    border: 1px solid #fff;
+}
+.btn:hover{
+    background-color: #3d3903;
+    border: 1px solid #fff;
+}
+/* Pie de página */
+.pie{
+    background-color: #655f05;
+    color: #ffffff;
+    padding: 20px; /* Añade un poco de espacio interno */
 }
