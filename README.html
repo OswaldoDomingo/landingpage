@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="cultura-ecol%C3%B3gica">Cultura Ecológica</h1>
+<h2 id="empresa-dedicada-al-cultivo-de-productos-de-forma-natural">Empresa dedicada al cultivo de productos de forma natural</h2>
+<p>Landing page enfocada a una empresa de cultivos ecológicos
+Me ha parecido interesante el tema de el negocio de cultivo ecológico que se de a conocer en internet.</p>
+<h2 id="herramientas-usadas">Herramientas usadas</h2>
+<p>Se ha usado el framework Bootstrap para hacer la página responsive y que se adapte a los dispositivos desde que se acceda.</p>
+<img src="img/Figma.png">
+<h2 id="paleta-de-colores">Paleta de colores</h2>
+<p>He escogido solo el color blabco, el color  #07521a y el color #655f05 para los fondos.
+Las letras de color blanco para contrastar con el fondo #655f05, el color #cc7614 para contrastar con el fondo de color #07521a y negro en fondos blancos.</p>
+<h2 id="fuentes-de-letra">Fuentes de letra</h2>
+<p>Las fuentes de letra las de Bootstrap y sus derivaciones.</p>
+<h2 id="estructura">Estructura</h2>
+<ul>
+<li>En la parte alta un Carousel con tres imágenes.</li>
+<li>Un título</li>
+<li>Una leyenda</li>
+<li>Tres etiquetas que se adaptan según sea tablet y movil.</li>
+<li>Cuatro tarjetas que sa adaptan a dos en versión tableta y las cuatro en una columna en versión movil.</li>
+<li>Un título de entrada a productos que se venden.</li>
+<li>Una imagen con título y al lado cuatro productos.
+<ul>
+<li>En versión tableta se queda una columna con la imagen arriba y los cuatro productos en dos columnas abajo.</li>
+<li>En versión movil se queda todo en una columna.</li>
+</ul>
+</li>
+<li>Tres desplegables con opiniones de clientes.
+<ul>
+<li>En el principal se ve imagen y titulo.</li>
+<li>Se despliiega y se ve la opinión.</li>
+</ul>
+</li>
+<li>Un pie de página partido con un formulario y el logo y la dirección de la empresa.
+<ul>
+<li>En versión movil el formulario y la dirección se quedan en una columna, el formulario arriba y la dirección abajo.</li>
+</ul>
+</li>
+</ul>
+<h2 id="desarrollo">Desarrollo</h2>
+<p>He tenido que modificar algunos estilos modificando el css.</p>
+<pre class="hljs"><code><div><span class="hljs-selector-class">.colorBlanco</span>{
+    <span class="hljs-attribute">color</span>:<span class="hljs-number">#FFFFFF</span>; 
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">3em</span>;
+}
+
+<span class="hljs-selector-class">.custom-div</span> {
+    <span class="hljs-attribute">display</span>: flex;
+    <span class="hljs-attribute">flex-direction</span>: column;
+    <span class="hljs-attribute">justify-content</span>: center;
+    <span class="hljs-attribute">align-items</span>: center;
+    <span class="hljs-attribute">max-width</span>: <span class="hljs-number">370px</span>; <span class="hljs-comment">/* Máximo ancho */</span>
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">142px</span>; <span class="hljs-comment">/* Altura fija */</span>
+    <span class="hljs-attribute">margin</span>: auto; <span class="hljs-comment">/* Centra el div en la columna */</span>
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.4em</span>;
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#07521a</span> <span class="hljs-meta">!important</span>;
+}
+<span class="hljs-selector-class">.custom-div</span> {
+    <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">#000</span>, <span class="hljs-comment">/* Este es el borde exterior */</span>
+                <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">15px</span> <span class="hljs-number">#fff</span>, <span class="hljs-comment">/* Este es el espacio entre los bordes */</span>
+                <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">16px</span> <span class="hljs-number">#000</span>; <span class="hljs-comment">/* Este es el borde interior */</span>
+}
+<span class="hljs-comment">/* Poner un marco a los botones de arriba */</span>
+<span class="hljs-selector-class">.custom-div</span><span class="hljs-selector-pseudo">:hover</span> {
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#07521a</span> <span class="hljs-meta">!important</span>;
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#ffffff</span> <span class="hljs-meta">!important</span>;
+    <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">#e4dede</span>, <span class="hljs-comment">/* Este es el borde exterior */</span>
+                <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">15px</span> <span class="hljs-number">#07521a</span>, <span class="hljs-comment">/* Este es el espacio entre los bordes */</span>
+                <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">16px</span> <span class="hljs-number">#ffffff</span>; <span class="hljs-comment">/* Este es el borde interior */</span>
+}
+
+<span class="hljs-selector-class">.custom-div</span> <span class="hljs-selector-tag">p</span><span class="hljs-selector-pseudo">:hover</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#cc7614</span> <span class="hljs-meta">!important</span>;
+}
+
+<span class="hljs-selector-class">.fondo-tarjetas</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#655f05</span>;
+    <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">30px</span>;
+    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">30px</span>;
+    <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">10px</span>;
+}
+
+<span class="hljs-selector-class">.row</span> &gt; <span class="hljs-selector-tag">div</span> {
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">25px</span>; <span class="hljs-comment">/* Espaciado entre los div */</span>
+}
+
+<span class="hljs-comment">/* Imágenes de los galardones */</span>
+<span class="hljs-selector-class">.imagen</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+}
+<span class="hljs-comment">/* Acordeón */</span>
+<span class="hljs-selector-class">.accordion-button</span><span class="hljs-selector-pseudo">:not(.collapsed)</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#FFFFFF</span>;
+}
+<span class="hljs-selector-class">.opinion-cliente</span>{
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.5rem</span>;
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#000000</span>;
+}
+<span class="hljs-selector-class">.p-custom-margin</span> {
+    <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">4rem</span>; <span class="hljs-comment">/* Ajusta este valor a tus necesidades */</span>
+}
+
+<span class="hljs-comment">/* Premios y galardones */</span>
+<span class="hljs-comment">/* Ajusta el tamaño de la imagen de las tarjetas para que no se hagan muy grandes al reducir la pantalla */</span>
+<span class="hljs-comment">/* Se debe usar para una sola vez*/</span>
+<span class="hljs-selector-class">.img-premio</span>{
+    <span class="hljs-attribute">text-align</span>: center;
+    <span class="hljs-attribute">max-width</span>: <span class="hljs-number">270px</span>;
+    <span class="hljs-attribute">max-height</span>: <span class="hljs-number">145px</span>;
+}
+<span class="hljs-comment">/* rectifco el alto de la tarjeta para que sea un mínimo de altura y quden todas iguales */</span>
+<span class="hljs-selector-class">.card</span>{
+    <span class="hljs-attribute">min-height</span>: <span class="hljs-number">440px</span>;
+}
+<span class="hljs-comment">/* Modificar los colores de el botón del formulario */</span>
+<span class="hljs-selector-class">.btn</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#655f05</span>;
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#fff</span>;
+}
+<span class="hljs-selector-class">.btn</span><span class="hljs-selector-pseudo">:hover</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#3d3903</span>;
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#fff</span>;
+}
+<span class="hljs-comment">/* Pie de página */</span>
+<span class="hljs-selector-class">.pie</span>{
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#655f05</span>;
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#ffffff</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">20px</span>; <span class="hljs-comment">/* Añade un poco de espacio interno */</span>
+}
+<span class="hljs-selector-class">.alto-minimo</span>{
+    <span class="hljs-comment">/* Se crea una altura mínima al 100% para que siempre tengan el mismo tamaño */</span>
+    <span class="hljs-attribute">min-height</span>: <span class="hljs-number">100%</span>;
+}
+</div></code></pre>
+<p>He hecho pruebas en ordenador, tablet y movil con buenos resultados.</p>
+<h2 id="aprendizaje">Aprendizaje</h2>
+<p>Nunca había usado Bootstrap pero lo veo que con un poco de práctica se puede usar para implementar de forma rápida estilos a pequeños proyectos.</p>
+
+</body>
+</html>
