@@ -91,3 +91,7 @@
     /* Se crea una altura mínima al 100% para que siempre tengan el mismo tamaño */
     min-height: 100%;
 }
+/* Poner los textos en negrita */
+.negrita{
+    font-weight: bold;
+}
