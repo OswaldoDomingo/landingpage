@@ -126,8 +126,43 @@ He tenido que modificar algunos estilos modificando el css.
     /* Se crea una altura mínima al 100% para que siempre tengan el mismo tamaño */
     min-height: 100%;
 }
+/* Poner los textos en negrita */
+.negrita{
+    font-weight: bold;
+}
 ```
 He hecho pruebas en ordenador, tablet y movil con buenos resultados.
+
+## Retos
+Ha habido algunos problemas de posicionamiento al cambiar de tamaño de pantalla cuando se muestra el producto al estar anidadas dos etiquetas `row`. Para que las imágenes se colocasen bien he tenido que usar el estilo ``class="img-fluid"``
+El código `HTML` con sus clases es:
+
+```css
+<div class="row">
+      <div class="col-lg-6 col-md-12 col-sm-12 text-center mb-3">
+          <img src="img/home-banner-1-570x715.jpg" alt="" class="img-fluid">
+      </div>
+      <div class="col-lg-6 col-md-12 col-sm-12">
+          <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-12 text-center mb-3">
+                  <img src="img/product-5-270x280.png" alt="" class="img-fluid">
+                  <p class="text-center negrita">Aguacate</p>
+                  <p class="text-center">Precio 2€</p>
+                  <img src="img/product-6-270x280.png" alt="" class="img-fluid">
+                  <p class="text-center negrita">Maíz</p>
+                  <p class="text-center">Precio 2€</p>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-12 text-center mb-3">
+                  <img src="img/product-7-270x280.png" alt="" class="img-fluid">
+                  <p class="text-center negrita">Brócoli</p>
+                  <p class="text-center">Precio 2€</p>
+                  <img src="img/product-8-270x280.png" alt="" class="img-fluid">
+                  <p class="text-center negrita">Alcachofa</p>
+                  <p class="text-center">Precio 2€</p>
+              </div>
+          </div>
+      </div>
+```
 ## Aprendizaje
 Nunca había usado Bootstrap pero lo veo que con un poco de práctica se puede usar para implementar de forma rápida estilos a pequeños proyectos.
 

@@ -498,8 +498,40 @@ Las letras de color blanco para contrastar con el fondo #655f05, el color #cc761
     <span class="hljs-comment">/* Se crea una altura mínima al 100% para que siempre tengan el mismo tamaño */</span>
     <span class="hljs-attribute">min-height</span>: <span class="hljs-number">100%</span>;
 }
+<span class="hljs-comment">/* Poner los textos en negrita */</span>
+<span class="hljs-selector-class">.negrita</span>{
+    <span class="hljs-attribute">font-weight</span>: bold;
+}
 </div></code></pre>
 <p>He hecho pruebas en ordenador, tablet y movil con buenos resultados.</p>
+<h2 id="retos">Retos</h2>
+<p>Ha habido algunos problemas de posicionamiento al cambiar de tamaño de pantalla cuando se muestra el producto al estar anidadas dos etiquetas <code>row</code>. Para que las imágenes se colocasen bien he tenido que usar el estilo <code>class=&quot;img-fluid&quot;</code>
+El código <code>HTML</code> con sus clases es:</p>
+<pre class="hljs"><code><div>&lt;<span class="hljs-selector-tag">div</span> <span class="hljs-selector-tag">class</span>="<span class="hljs-selector-tag">row</span>"&gt;
+      &lt;<span class="hljs-selector-tag">div</span> <span class="hljs-selector-tag">class</span>="<span class="hljs-selector-tag">col-lg-6</span> <span class="hljs-selector-tag">col-md-12</span> <span class="hljs-selector-tag">col-sm-12</span> <span class="hljs-selector-tag">text-center</span> <span class="hljs-selector-tag">mb-3</span>"&gt;
+          &lt;<span class="hljs-selector-tag">img</span> <span class="hljs-selector-tag">src</span>="<span class="hljs-selector-tag">img</span>/<span class="hljs-selector-tag">home-banner-1-570x715</span><span class="hljs-selector-class">.jpg</span>" <span class="hljs-selector-tag">alt</span>="" <span class="hljs-selector-tag">class</span>="<span class="hljs-selector-tag">img-fluid</span>"&gt;
+      &lt;/<span class="hljs-selector-tag">div</span>&gt;
+      &lt;<span class="hljs-selector-tag">div</span> <span class="hljs-selector-tag">class</span>="<span class="hljs-selector-tag">col-lg-6</span> <span class="hljs-selector-tag">col-md-12</span> <span class="hljs-selector-tag">col-sm-12</span>"&gt;
+          &lt;<span class="hljs-selector-tag">div</span> <span class="hljs-selector-tag">class</span>="<span class="hljs-selector-tag">row</span>"&gt;
+              &lt;<span class="hljs-selector-tag">div</span> <span class="hljs-selector-tag">class</span>="<span class="hljs-selector-tag">col-lg-6</span> <span class="hljs-selector-tag">col-md-6</span> <span class="hljs-selector-tag">col-sm-12</span> <span class="hljs-selector-tag">text-center</span> <span class="hljs-selector-tag">mb-3</span>"&gt;
+                  &lt;<span class="hljs-selector-tag">img</span> <span class="hljs-selector-tag">src</span>="<span class="hljs-selector-tag">img</span>/<span class="hljs-selector-tag">product-5-270x280</span><span class="hljs-selector-class">.png</span>" <span class="hljs-selector-tag">alt</span>="" <span class="hljs-selector-tag">class</span>="<span class="hljs-selector-tag">img-fluid</span>"&gt;
+                  &lt;<span class="hljs-selector-tag">p</span> <span class="hljs-selector-tag">class</span>="<span class="hljs-selector-tag">text-center</span> <span class="hljs-selector-tag">negrita</span>"&gt;<span class="hljs-selector-tag">Aguacate</span>&lt;/<span class="hljs-selector-tag">p</span>&gt;
+                  &lt;<span class="hljs-selector-tag">p</span> <span class="hljs-selector-tag">class</span>="<span class="hljs-selector-tag">text-center</span>"&gt;<span class="hljs-selector-tag">Precio</span> 2€&lt;/<span class="hljs-selector-tag">p</span>&gt;
+                  &lt;<span class="hljs-selector-tag">img</span> <span class="hljs-selector-tag">src</span>="<span class="hljs-selector-tag">img</span>/<span class="hljs-selector-tag">product-6-270x280</span><span class="hljs-selector-class">.png</span>" <span class="hljs-selector-tag">alt</span>="" <span class="hljs-selector-tag">class</span>="<span class="hljs-selector-tag">img-fluid</span>"&gt;
+                  &lt;<span class="hljs-selector-tag">p</span> <span class="hljs-selector-tag">class</span>="<span class="hljs-selector-tag">text-center</span> <span class="hljs-selector-tag">negrita</span>"&gt;<span class="hljs-selector-tag">Ma</span>í<span class="hljs-selector-tag">z</span>&lt;/<span class="hljs-selector-tag">p</span>&gt;
+                  &lt;<span class="hljs-selector-tag">p</span> <span class="hljs-selector-tag">class</span>="<span class="hljs-selector-tag">text-center</span>"&gt;<span class="hljs-selector-tag">Precio</span> 2€&lt;/<span class="hljs-selector-tag">p</span>&gt;
+              &lt;/<span class="hljs-selector-tag">div</span>&gt;
+              &lt;<span class="hljs-selector-tag">div</span> <span class="hljs-selector-tag">class</span>="<span class="hljs-selector-tag">col-lg-6</span> <span class="hljs-selector-tag">col-md-6</span> <span class="hljs-selector-tag">col-sm-12</span> <span class="hljs-selector-tag">text-center</span> <span class="hljs-selector-tag">mb-3</span>"&gt;
+                  &lt;<span class="hljs-selector-tag">img</span> <span class="hljs-selector-tag">src</span>="<span class="hljs-selector-tag">img</span>/<span class="hljs-selector-tag">product-7-270x280</span><span class="hljs-selector-class">.png</span>" <span class="hljs-selector-tag">alt</span>="" <span class="hljs-selector-tag">class</span>="<span class="hljs-selector-tag">img-fluid</span>"&gt;
+                  &lt;<span class="hljs-selector-tag">p</span> <span class="hljs-selector-tag">class</span>="<span class="hljs-selector-tag">text-center</span> <span class="hljs-selector-tag">negrita</span>"&gt;<span class="hljs-selector-tag">Br</span>ó<span class="hljs-selector-tag">coli</span>&lt;/<span class="hljs-selector-tag">p</span>&gt;
+                  &lt;<span class="hljs-selector-tag">p</span> <span class="hljs-selector-tag">class</span>="<span class="hljs-selector-tag">text-center</span>"&gt;<span class="hljs-selector-tag">Precio</span> 2€&lt;/<span class="hljs-selector-tag">p</span>&gt;
+                  &lt;<span class="hljs-selector-tag">img</span> <span class="hljs-selector-tag">src</span>="<span class="hljs-selector-tag">img</span>/<span class="hljs-selector-tag">product-8-270x280</span><span class="hljs-selector-class">.png</span>" <span class="hljs-selector-tag">alt</span>="" <span class="hljs-selector-tag">class</span>="<span class="hljs-selector-tag">img-fluid</span>"&gt;
+                  &lt;<span class="hljs-selector-tag">p</span> <span class="hljs-selector-tag">class</span>="<span class="hljs-selector-tag">text-center</span> <span class="hljs-selector-tag">negrita</span>"&gt;<span class="hljs-selector-tag">Alcachofa</span>&lt;/<span class="hljs-selector-tag">p</span>&gt;
+                  &lt;<span class="hljs-selector-tag">p</span> <span class="hljs-selector-tag">class</span>="<span class="hljs-selector-tag">text-center</span>"&gt;<span class="hljs-selector-tag">Precio</span> 2€&lt;/<span class="hljs-selector-tag">p</span>&gt;
+              &lt;/<span class="hljs-selector-tag">div</span>&gt;
+          &lt;/<span class="hljs-selector-tag">div</span>&gt;
+      &lt;/<span class="hljs-selector-tag">div</span>&gt;
+</div></code></pre>
 <h2 id="aprendizaje">Aprendizaje</h2>
 <p>Nunca había usado Bootstrap pero lo veo que con un poco de práctica se puede usar para implementar de forma rápida estilos a pequeños proyectos.</p>
 
