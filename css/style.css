@@ -12,7 +12,7 @@
     height: 142px; /* Altura fija */
     margin: auto; /* Centra el div en la columna */
     font-size: 1.4em;
-    color: #07521a !important;
+    color: #655f05 !important;
 }
 .custom-div {
     box-shadow: 0 0 0 1px #000, /* Este es el borde exterior */
@@ -21,15 +21,15 @@
 }
 /* Poner un marco a los botones de arriba */
 .custom-div:hover {
-    background-color: #07521a !important;
+    background-color: #655f05 !important;
     color: #ffffff !important;
-    box-shadow: 0 0 0 1px #e4dede, /* Este es el borde exterior */
-                0 0 0 15px #07521a, /* Este es el espacio entre los bordes */
-                0 0 0 16px #ffffff; /* Este es el borde interior */
+    box-shadow: 0 0 0 1px #f1eca5, /* Este es el borde exterior */
+                0 0 0 15px #655f05, /* Este es el espacio entre los bordes */
+                0 0 0 16px #f1eca5; /* Este es el borde interior */
 }
 
 .custom-div p:hover {
-    color: #cc7614 !important;
+    color: #f1eca5 !important;
 }
 
 .fondo-tarjetas{
